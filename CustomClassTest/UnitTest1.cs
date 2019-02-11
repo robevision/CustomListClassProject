@@ -21,6 +21,18 @@ namespace CustomClassTest
             Assert.AreEqual(expectedResult, myList.Count);
         }
         [TestMethod]
+        public void Push_OneInt_IntoList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            int expectedResult = 1;
+            //Act
+            myList.Add(value);
+            //Assert
+            Assert.AreEqual(expectedResult, myList.Count);
+        }
+        [TestMethod]
         public void Count_Int_InList()
         {
             //Arrange

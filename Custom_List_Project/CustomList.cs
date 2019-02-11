@@ -13,15 +13,21 @@ namespace Custom_List_Project
         //T value;
         
         int capacity;
-        int count = 0;
+        int count;
 
         public CustomList()
         {
-            items = new T[capacity]; 
-             capacity = 4;
+            capacity = 4;
+            items = new T[capacity];
+            count = 0;
+            
             
         }
-        public int Count{ get; set; }
+        public int Count
+        {
+            get;
+            set;
+        }
 
         //public int Capacity { get;}
         public void Add(T item)
@@ -33,6 +39,7 @@ namespace Custom_List_Project
                 T[] temp = new T[capacity * 2];
                 temp = items;
             }
+            
             //temp array hint
             
             //if(capacity > )
