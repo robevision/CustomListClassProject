@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Custom_List_Project
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable
     {
         private T[] items;
        
@@ -93,13 +94,20 @@ namespace Custom_List_Project
             //ADDED THING
             //count++
         }
-        //public void Capacity()
-        //{
-        //    if (items == 1)
-        //    {
-        //        .Add defaultCapacity[4]
-        //    }
-        //}
+       //public IEnumerator <T> GetEnumerator()
+       // {
+       //     for (int i = 0; i < Count; i++)
+       //     {
+       //         yield return items[i];
+       //     }
+       // }
 
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                yield return items[i];
+            }
+        }
     }
 }

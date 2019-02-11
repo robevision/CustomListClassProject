@@ -10,6 +10,7 @@ namespace Custom_List_Project
     {
         static void Main(string[] args)
         {
+            //CustomList<int> myList = new CustomList<int>() { 3, 4 };
             List<int> numbers = new List<int>() { 2, 5, 6, 2, 9, 4, 22, 3, 6, 10 };
             numbers.Remove(2);
             numbers.Remove(3);

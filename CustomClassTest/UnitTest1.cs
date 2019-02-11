@@ -62,6 +62,17 @@ namespace CustomClassTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
+        public void CreateMultiple_Int_List()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>() {3, 4, 6, 13, 18, 23, 34};
+            int expectedResult = 7;
+            //Act
+            int actualResult = myList.Count;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
         //[TestMethod]
         //public void Add_Int_FirstArrayPositon()
         //{
