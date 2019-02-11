@@ -10,12 +10,15 @@ namespace Custom_List_Project
     {
         static void Main(string[] args)
         {
-            CustomList<int> customList = new CustomList<int>();
-            customList.Add(2);
-            customList.Add(7);
-            customList.Add(10);
-            customList.Add(22);
-            customList.Add(4);
+            List<int> numbers = new List<int>() { 2, 5, 6, 2, 9, 4, 22, 3, 6, 10 };
+            numbers.Remove(2);
+            numbers.Remove(3);
+            //CustomList<int> customList = new CustomList<int>();
+            //customList.Add(2);
+            //customList.Add(7);
+            //customList.Add(10);
+            //customList.Add(22);
+            //customList.Add(4);
             //BuiltInListMethod builtIn = new BuiltInListMethod();
             //builtIn.RunList();
             //List<int> list = new List<int>();

@@ -19,9 +19,9 @@ namespace Custom_List_Project
             Count = 0;
             capacity = 4;
             items = new T[capacity];
+            Capacity();
             
-            
-            
+
         }
         public int Count
         {
@@ -29,25 +29,22 @@ namespace Custom_List_Project
       
         }
 
-        //public int Capacity { get;}
-        public void Add(T item)
+        private void Capacity()
         {
             if (Count == capacity)
             {
                 T[] temp = new T[capacity * 2];
-                for(int i = 0;i < capacity; i++)
+                for (int i = 0; i < capacity; i++)
                 {
                     temp[i] = items[i];
                 }
                 items = temp;
-                //for(int i = 0; i < Count; i++)
-                //{
-                //    items[Count] = item;
-                //}
-                //T[] NewItems = items + temp;
 
-                //copy values over while maintaining original size
             }
+        }
+        public void Add(T item)
+        {
+            Capacity();
 
             for (int i = 0; i < Count; i++)
             {
