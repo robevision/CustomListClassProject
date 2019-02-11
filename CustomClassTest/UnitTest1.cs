@@ -16,9 +16,24 @@ namespace CustomClassTest
             int expectedResult = 1;
             ////Act
             myList.Add(value);
+            int actualResult = myList.Count;
+            ////Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Expand_Int_Count()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 0;
+            myList.Count = 3;
+            int expectedResult = 8;
+            ////Act
+            myList.Add(value);
+            int actualResult = myList.Count;
 
             ////Assert
-            Assert.AreEqual(expectedResult, myList.Count);
+            Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
         public void Push_OneInt_IntoList()
@@ -37,9 +52,9 @@ namespace CustomClassTest
         {
             //Arrange
             CustomList<int> myList = new CustomList<int>();
-            int value1 = 0;
+            int value1 = 5;
             int value2 = 1;
-            int expectedResult = 0;
+            int expectedResult = 2;
             //Act
             myList.Add(value1);
             myList.Add(value2);
