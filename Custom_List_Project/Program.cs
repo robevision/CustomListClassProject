@@ -12,6 +12,10 @@ namespace Custom_List_Project
         {
             CustomList<int> customList = new CustomList<int>();
             customList.Add(2);
+            customList.Add(7);
+            customList.Add(10);
+            customList.Add(22);
+            customList.Add(4);
             //BuiltInListMethod builtIn = new BuiltInListMethod();
             //builtIn.RunList();
             //List<int> list = new List<int>();

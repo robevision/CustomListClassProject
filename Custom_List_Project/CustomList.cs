@@ -32,18 +32,14 @@ namespace Custom_List_Project
         //public int Capacity { get;}
         public void Add(T item)
         {
-          
-            for (int i = 0; i < Count; i++)
-            {
-                items[Count] = item;
-            }
-
-            items[Count] = item;
-            Count++;
-
-            if (Count + 1 == capacity)
+            if (Count == capacity)
             {
                 T[] temp = new T[capacity * 2];
+                for(int i = 0;i < capacity; i++)
+                {
+                    temp[i] = items[i];
+                }
+                items = temp;
                 //for(int i = 0; i < Count; i++)
                 //{
                 //    items[Count] = item;
@@ -53,6 +49,13 @@ namespace Custom_List_Project
                 //copy values over while maintaining original size
             }
 
+            for (int i = 0; i < Count; i++)
+            {
+                items[Count] = item;
+            }
+            items[Count] = item;
+            Count++;
+
             //temp array hint
 
             //if(capacity > )
@@ -61,37 +64,37 @@ namespace Custom_List_Project
             //}
 
 
-            
+
             //{
 
-                //}
-                //int temp;
-                //temp = item;
-                //T item1;
-                //try
-                //{
-                //    item += item1;
-                //    canAdd = true;
-                //}
-                //catch
-                //{
+            //}
+            //int temp;
+            //temp = item;
+            //T item1;
+            //try
+            //{
+            //    item += item1;
+            //    canAdd = true;
+            //}
+            //catch
+            //{
 
-                //}
+            //}
 
-                //if (value + value)
-                //{
+            //if (value + value)
+            //{
 
-                //    int x = 0;
-                //    int grow = x++;
-                //}
-
-
-
-                //items +  
+            //    int x = 0;
+            //    int grow = x++;
+            //}
 
 
-                //ADDED THING
-                //count++
+
+            //items +  
+
+
+            //ADDED THING
+            //count++
         }
         //public void Capacity()
         //{
@@ -100,6 +103,6 @@ namespace Custom_List_Project
         //        .Add defaultCapacity[4]
         //    }
         //}
-     
+
     }
 }

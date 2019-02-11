@@ -26,8 +26,8 @@ namespace CustomClassTest
             //Arrange
             CustomList<int> myList = new CustomList<int>();
             int value = 0;
-            myList.Count = 3;
-            int expectedResult = 8;
+            myList.Count = 4;
+            int expectedResult = 5;
             ////Act
             myList.Add(value);
             int actualResult = myList.Count;
