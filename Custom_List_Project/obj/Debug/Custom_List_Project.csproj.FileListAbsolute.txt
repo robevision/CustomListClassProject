@@ -1,0 +1,7 @@
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\bin\Debug\Custom_List_Project.exe.config
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\bin\Debug\Custom_List_Project.exe
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\bin\Debug\Custom_List_Project.pdb
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\obj\Debug\Custom_List_Project.csprojAssemblyReference.cache
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\obj\Debug\Custom_List_Project.csproj.CoreCompileInputs.cache
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\obj\Debug\Custom_List_Project.exe
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\Custom_List_Project\obj\Debug\Custom_List_Project.pdb

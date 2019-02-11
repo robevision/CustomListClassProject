@@ -10,6 +10,20 @@ namespace Custom_List_Project
     {
         static void Main(string[] args)
         {
+            //BuiltInListMethod builtIn = new BuiltInListMethod();
+            //builtIn.RunList();
+            List<int> list = new List<int>();
+            list.Add(2);
+            list.Add(4);
+            list.Add(6);
+            list.Add(24);
+            list.Add(13);
+            List<string> list2 = new List<string>();
+            list2.Add("one");
+            list2.Add("seven");
+            list2.Add("four");
+            CustomList<int> customList = new CustomList<int>();
+         
         }
     }
 }

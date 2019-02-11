@@ -1,0 +1,17 @@
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\CustomClassTest.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\CustomClassTest.pdb
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Custom_List_Project.exe
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Custom_List_Project.pdb
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Custom_List_Project.exe.config
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\obj\Debug\CustomClassTest.csprojAssemblyReference.cache
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\obj\Debug\CustomClassTest.csproj.CoreCompileInputs.cache
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\obj\Debug\CustomClassTest.csproj.CopyComplete
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\obj\Debug\CustomClassTest.dll
+C:\Users\theri\Documents\DCC_Proj\CLProj\CustomListClassProject\CustomClassTest\obj\Debug\CustomClassTest.pdb

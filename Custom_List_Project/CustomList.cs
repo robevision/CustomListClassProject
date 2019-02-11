@@ -6,7 +6,80 @@ using System.Threading.Tasks;
 
 namespace Custom_List_Project
 {
-    class CustomList
+    public class CustomList<T>
     {
+        private T[] items;
+       
+        //T value;
+        
+        int capacity;
+        int count = 0;
+
+        public CustomList()
+        {
+            items = new T[capacity]; 
+             capacity = 4;
+            
+        }
+        public int Count{ get; set; }
+
+        //public int Capacity { get;}
+        public void Add(T item)
+        {
+            item = items[count + 1];
+            count++;
+            if (count == capacity)
+            {
+                T[] temp = new T[capacity * 2];
+                temp = items;
+            }
+            //temp array hint
+            
+            //if(capacity > )
+            //{
+            //    capacity = 4;
+            //}
+       
+
+            //for(int i=0;i < /*SOMETHING*//*;*/ i++)
+            //{
+
+            //}
+            //int temp;
+            //temp = item;
+            //T item1;
+            //try
+            //{
+            //    item += item1;
+            //    canAdd = true;
+            //}
+            //catch
+            //{
+
+            //}
+           
+            //if (value + value)
+            //{
+                
+            //    int x = 0;
+            //    int grow = x++;
+            //}
+          
+
+
+            //items +  
+
+
+            //ADDED THING
+            //count++
+        }
+        //public void Capacity()
+        //{
+        //    if (items == 1)
+        //    {
+        //        .Add defaultCapacity[4]
+        //    }
+        //}
+     
     }
 }
