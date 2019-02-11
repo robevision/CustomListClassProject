@@ -14,25 +14,37 @@ namespace Custom_List_Project
         //T value;
         
         int capacity;
+        int count;
 
         public CustomList()
         {
-            Count = 0;
+            count = 0;
             capacity = 4;
             items = new T[capacity];
-            Capacity();
+            GenerateCapacity();
             
 
         }
         public int Count
         {
-            get; set;
+            get
+            {
+                return count;
+            }   
       
         }
-
-        private void Capacity()
+        public int Capacity
         {
-            if (Count == capacity)
+            get
+            {
+                return capacity;
+            }
+            
+        }
+
+        private void GenerateCapacity()
+        {
+            if (count == capacity)
             {
                 T[] temp = new T[capacity * 2];
                 for (int i = 0; i < capacity; i++)
@@ -45,14 +57,14 @@ namespace Custom_List_Project
         }
         public void Add(T item)
         {
-            Capacity();
+            GenerateCapacity();
 
-            for (int i = 0; i < Count; i++)
+            for (int i = 0; i < count; i++)
             {
-                items[Count] = item;
+                items[count] = item;
             }
-            items[Count] = item;
-            Count++;
+            items[count] = item;
+            count++;
 
             //temp array hint
 
@@ -94,13 +106,6 @@ namespace Custom_List_Project
             //ADDED THING
             //count++
         }
-       //public IEnumerator <T> GetEnumerator()
-       // {
-       //     for (int i = 0; i < Count; i++)
-       //     {
-       //         yield return items[i];
-       //     }
-       // }
 
         public IEnumerator GetEnumerator()
         {

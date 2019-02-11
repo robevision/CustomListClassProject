@@ -20,21 +20,21 @@ namespace CustomClassTest
             ////Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-        [TestMethod]
-        public void Expand_Int_Count()
-        {
-            //Arrange
-            CustomList<int> myList = new CustomList<int>();
-            int value = 0;
-            myList.Count = 4;
-            int expectedResult = 5;
-            ////Act
-            myList.Add(value);
-            int actualResult = myList.Count;
+        //[TestMethod]
+        //public void Expand_Int_Count()
+        //{
+        //    //Arrange
+        //    CustomList<int> myList = new CustomList<int>();
+        //    int value = 0;
+        //    myList.Count = 4;
+        //    int expectedResult = 5;
+        //    ////Act
+        //    myList.Add(value);
+        //    int actualResult = myList.Count;
 
-            ////Assert
-            Assert.AreEqual(expectedResult, actualResult);
-        }
+        //    ////Assert
+        //    Assert.AreEqual(expectedResult, actualResult);
+        //}
         [TestMethod]
         public void Push_OneInt_IntoList()
         {
@@ -82,9 +82,10 @@ namespace CustomClassTest
         //    int expectedResult = 3;
         //    //Act
         //    myList.Add(value);
+        //    int actualResult = myList[0];
 
         //    //Assert
-        //    Assert.AreEqual(expectedResult, myList[0]);
+        //    Assert.AreEqual(expectedResult, actualResult);
         //}
         //[TestMethod]
         //public void AddTwo_Int_FirstArrayPosition()
@@ -97,9 +98,10 @@ namespace CustomClassTest
         //    //Act
         //    myList.Add(value);
         //    myList.Add(value1);
+        //    int actualResult = myList[0];
 
         //    //Assert
-        //    Assert.AreEqual(expectedResult, myList[0]);
+        //    Assert.AreEqual(expectedResult, actualResult);
         //}
         //[TestMethod]
         //public void AddTwo_Int_SecondArrayPosition()
@@ -116,19 +118,19 @@ namespace CustomClassTest
         //    //Assert
         //    Assert.AreEqual(expectedResult, myList[1]);
         //}
-        //[testmethod]
-        //public void Count_Int_Capacity()
-        //{
-        //    //Arrange
-        //    CustomList<int> myList = new CustomList<int>();
-        //    int value = 1;
-        //    int expectedResult = 4;
-        //    //Act
-        //    myList.Add(value);
-        //    actualResult=myList.Capacity();
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
+        [TestMethod]
+        public void Count_Int_Capacity()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            int expectedResult = 4;
+            //Act
+            myList.Add(value);
+            int actualResult = myList.Capacity;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
         [TestMethod]
         public void Count_String_InList()
         {
