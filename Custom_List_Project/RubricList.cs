@@ -16,6 +16,42 @@ namespace Custom_List_Project
                             //{
 
         //}
-       
+        //public void Remove(T item)
+        //{
+        //    for (int i = 0; i < count; i++)
+        //    {
+
+
+        //        if (items[i].Equals(item))
+        //        {
+        //            foreach (T value in items)
+        //            {
+
+        //            }
+        //            //T value = (item - items[i]);
+        //            //items[count] = value;
+        //            //count--;
+        //        }
+        //        else
+        //        {
+        //            count--;
+
+        //        }
+        //    }
+        //}
+        //public void Remove(T item)
+        //{
+        //    foreach (T value in items)
+        //    {
+        //        value = item;
+
+        //    }
+        //T value = (item - items[i]);
+        //items[count] = value;
+        //count--;
+
+    
+
+        
     }
 }

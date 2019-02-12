@@ -20,21 +20,28 @@ namespace CustomClassTest
             ////Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-        //[TestMethod]
-        //public void Expand_Int_Count()
-        //{
-        //    //Arrange
-        //    CustomList<int> myList = new CustomList<int>();
-        //    int value = 0;
-        //    myList.Count = 4;
-        //    int expectedResult = 5;
-        //    ////Act
-        //    myList.Add(value);
-        //    int actualResult = myList.Count;
+        [TestMethod]
+        public void Expand_Int_Count()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            int value1 = 4;
+            int value2 = 7;
+            int value3 = 3;
+            int value4 = 2;
+            int expectedResult = 5;
+            ////Act
+            myList.Add(value);
+            myList.Add(value1);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            int actualResult = myList.Count;
 
-        //    ////Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
+            ////Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
         [TestMethod]
         public void Push_OneInt_IntoList()
         {
@@ -131,6 +138,21 @@ namespace CustomClassTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        //test for when overloading is implemented
+        //[TestMethod]
+        //public void AddMultiple_Int_InList()
+        //{
+        //    //Arrange
+        //    CustomList<int> myList = new CustomList<int>();
+        //    int value = 1;
+        //    int value1 = 4;
+        //    int expectedResult = 4;
+        //    //Act
+        //    myList.Add(value, value1);
+        //    int actualResult = myList.Count;
+        //    //Assert
+        //    Assert.AreEqual(expectedResult, actualResult);
+        //}
         [TestMethod]
         public void Count_String_InList()
         {
@@ -144,8 +166,92 @@ namespace CustomClassTest
             //Assert
             Assert.AreEqual(expectedResult, myList.Count);
         }
+        [TestMethod]
+        public void Remove_Int_InList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>() {1};
+            int value = 1;
+            int expectedResult = 0;
+            //Act
+            myList.Remove(value);
+            int actualResult = myList.Count;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Remove_String_InList()
+        {
+            //Arrange
+            CustomList<string> myList = new CustomList<string>() {"test"};
+            string value = "test";
+            int expectedResult = 0;
+            //Act
+            myList.Remove(value);
+            int actualResult = myList.Count;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Remove_String_InList1()
+        {
+            //Arrange
+            CustomList<string> myList = new CustomList<string>() { "test", "thing","otherThing" };
+            string value = "thing";
+            string expectedResult = "otherThing";
+            //Act
+            myList.Remove(value);
+            string actualResult = myList[1];
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
         //[TestMethod]
-        //public void Count_Int_CountList()
+        //public void Find_Int_InList()
+        //{
+        //    //Arrange
+        //    CustomList<int> myList = new CustomList<int>() {1,2,4,6,7,20,3,5};
+        //    int value = 3;
+        //    int expectedResult = 5;
+        //    //Act
+        //    myList.Remove(value);
+        //    int actualResult = myList[6];
+        //    //Assert
+        //    Assert.AreEqual(expectedResult, actualResult);
+        //}
+
+        [TestMethod]
+        public void AddAndRemove_Int_InList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            int expectedResult = 0;
+            //Act
+            myList.Add(value);
+            myList.Remove(value);
+            int actualResult = myList.Count;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void RemoveAndAdd_Int_InList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            int value1 = 4;
+            int expectedResult = 1;
+            //Act
+            myList.Add(value);
+            myList.Remove(value);
+            myList.Add(value1);
+            int actualResult = myList.Count;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        //[TestMethod]
+        //public void Count_String_CountList()
         //{
         //    //Arrange
         //    CustomList<string> myList = new CustomList<string>()

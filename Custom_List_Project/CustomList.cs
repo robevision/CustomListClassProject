@@ -16,6 +16,26 @@ namespace Custom_List_Project
         int capacity;
         int count;
 
+        //TODO: Indexer
+        //public items [int index]
+        public T this[int index]   // Indexer declaration  
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                //this and that conditionals 
+                //index needs to be in the bounds of what items array will be set at
+                //index will be positive and will start at 1
+              
+            }
+
+        }
+
+
+
         public CustomList()
         {
             count = 0;
@@ -55,6 +75,26 @@ namespace Custom_List_Project
 
             }
         }
+        public void Remove(T item)
+        {
+            for (int i = 0; i < count; i++)
+            {
+
+                if (items[i].Equals(item))
+                {
+                    count--;
+                    //T value = (item - items[i]);
+                    //items[count] = value;
+                    //count--;
+                }
+                else
+                {
+                    count--;
+
+                }
+            }
+        }
+
         public void Add(T item)
         {
             GenerateCapacity();
