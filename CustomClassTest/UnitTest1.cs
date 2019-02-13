@@ -80,51 +80,51 @@ namespace CustomClassTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-        //[TestMethod]
-        //public void Add_Int_FirstArrayPositon()
-        //{
-        //    //Arrange
-        //    CustomList<int> myList = new CustomList<int>();
-        //    int value = 3;
-        //    int expectedResult = 3;
-        //    //Act
-        //    myList.Add(value);
-        //    int actualResult = myList[0];
+        [TestMethod]
+        public void Add_Int_FirstArrayPositon()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 3;
+            int expectedResult = 3;
+            //Act
+            myList.Add(value);
+            int actualResult = myList[0];
 
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
-        //[TestMethod]
-        //public void AddTwo_Int_FirstArrayPosition()
-        //{
-        //    //Arrange
-        //    CustomList<int> myList = new CustomList<int>();
-        //    int value = 3;
-        //    int value1 = 5;
-        //    int expectedResult = 3;
-        //    //Act
-        //    myList.Add(value);
-        //    myList.Add(value1);
-        //    int actualResult = myList[0];
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void AddTwo_Int_FirstArrayPosition()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 3;
+            int value1 = 5;
+            int expectedResult = 3;
+            //Act
+            myList.Add(value);
+            myList.Add(value1);
+            int actualResult = myList[0];
 
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
-        //[TestMethod]
-        //public void AddTwo_Int_SecondArrayPosition()
-        //{
-        //    //Arrange
-        //    CustomList<int> myList = new CustomList<int>();
-        //    int value = 3;
-        //    int value1 = 5;
-        //    int expectedResult = 5;
-        //    //Act
-        //    myList.Add(value);
-        //    myList.Add(value1);
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void AddTwo_Int_SecondArrayPosition()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 3;
+            int value1 = 5;
+            int expectedResult = 5;
+            //Act
+            myList.Add(value);
+            myList.Add(value1);
 
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, myList[1]);
-        //}
+            //Assert
+            Assert.AreEqual(expectedResult, myList[1]);
+        }
         [TestMethod]
         public void Count_Int_Capacity()
         {
@@ -193,7 +193,7 @@ namespace CustomClassTest
             Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
-        public void Remove_String_InList1()
+        public void Find_String_InList()
         {
             //Arrange
             CustomList<string> myList = new CustomList<string>() { "test", "thing","otherThing" };
@@ -205,20 +205,33 @@ namespace CustomClassTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
+        public void FindAfterAdd_String_InList()
+        {
+            //Arrange
+            CustomList<string> myList = new CustomList<string>();
+            string value = "thing";
+            string expectedResult = "thing";
+            //Act
+            myList.Add(value);
+            string actualResult = myList[0];
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
-        //[TestMethod]
-        //public void Find_Int_InList()
-        //{
-        //    //Arrange
-        //    CustomList<int> myList = new CustomList<int>() {1,2,4,6,7,20,3,5};
-        //    int value = 3;
-        //    int expectedResult = 5;
-        //    //Act
-        //    myList.Remove(value);
-        //    int actualResult = myList[6];
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
+        [TestMethod]
+        public void Find_Int_InList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>() { 1, 2, 4, 6, 7, 20, 3, 5 };
+            int value = 3;
+            int expectedResult = 5;
+            //Act
+            myList.Remove(value);
+            int actualResult = myList[6];
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
         [TestMethod]
         public void AddAndRemove_Int_InList()
