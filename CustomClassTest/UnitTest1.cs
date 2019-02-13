@@ -181,6 +181,32 @@ namespace CustomClassTest
             Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
+        public void Remove_Int_EndOfLongList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>() {1,5,8,7,24,57,68,4,5,6,3,4,5,9,10,30,23,43,45};
+            int value = 45;
+            int expectedResult = 43;
+            //Act
+            myList.Remove(value);
+            int actualResult = myList[17];
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Add_Int_EndOfLongList()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>() {1, 5, 8, 7, 24, 57, 68, 4, 5, 6, 3, 4, 5, 9, 10, 30, 23, 43};
+            int value = 45;
+            int expectedResult = 43;
+            //Act
+            myList.Add(value);
+            int actualResult = myList[17];
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
         public void Remove_String_InList()
         {
             //Arrange

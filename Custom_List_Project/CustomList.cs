@@ -10,15 +10,34 @@ namespace Custom_List_Project
     public class CustomList<T> : IEnumerable
     {
         private T[] items;
-       
-        //T value;
-        
+        //overload operator +
+    
+
+   
+
         int capacity;
         int count;
+        public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)
+        {
+            for (int i = 0; i < b.count; i++)
+            {
+                a.Add(b[i]);
+            }
+            return a;
 
-        //TODO: Indexer
-        //public items [int index]
-        public T this[int index]   // Indexer declaration  
+        }
+        public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
+        {
+            for (int i = 0; i < b.count; i++)
+            {
+                a.Remove(b[i]);
+            }
+            return a;
+        }
+
+    //TODO: Indexer
+    //public items [int index]
+    public T this[int index]   // Indexer declaration  
         {
             get
             {
@@ -26,6 +45,7 @@ namespace Custom_List_Project
             }
             set
             {
+                items[index] = value;
                 //this and that conditionals 
                 //index needs to be in the bounds of what items array will be set at
                 //index will be positive and will start at 1
@@ -70,8 +90,9 @@ namespace Custom_List_Project
                 for (int i = 0; i < count; i++)
                 {
                     temp[i] = items[i];
-                    capacity = capacity * 2;
+                    
                 }
+                capacity = capacity * 2;
                 items = temp;
 
             }
@@ -111,8 +132,8 @@ namespace Custom_List_Project
             StringBuilder appendList = new StringBuilder();
             for(int i = 0; i < count; i++)
             {
-                Console.WriteLine(appendList.Append(items[i])); 
-               
+                appendList.Append(items[i]);
+
             }
            
             return appendList.ToString();
@@ -160,6 +181,10 @@ namespace Custom_List_Project
                 return customStringList;
             }
         }
+        public void Zip()
+        {
+
+        }
       
         public void Add(T item)
         {
@@ -167,7 +192,7 @@ namespace Custom_List_Project
 
             for (int i = 0; i < count; i++)
             {
-                items[count] = item;
+                items[count] = item;     
             }
             items[count] = item;
             count++;

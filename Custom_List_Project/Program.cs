@@ -11,10 +11,15 @@ namespace Custom_List_Project
         static void Main(string[] args)
         {
             List<int> list = new List<int> { 1, 4, 5, 9 };
-            CustomList<int> myList = new CustomList<int>() { 3, 4 };
-            string result = myList.ToString();
+            CustomList<int> myListA = new CustomList<int>() { 3, 4 };
+            CustomList<int> myListB = new CustomList<int>() { 1, 6 };
+            string result = myListA.ToString();
             CustomList<string> myRemoveList = new CustomList<string>() { "hello", "world", "code" };
             myRemoveList.Remove("world");
+            CustomList<int> myListC = new CustomList<int>();
+            myListC = myListB - myListA;
+            Console.WriteLine(myListC);
+            Console.ReadLine();
             //List<int> numbers = new List<int>() { 2, 5, 6, 2, 9, 4, 22, 3, 6, 10 };
             //numbers.Remove(2);
             //numbers.Remove(3);
