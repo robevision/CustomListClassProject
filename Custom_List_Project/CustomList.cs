@@ -67,9 +67,10 @@ namespace Custom_List_Project
             if (count == capacity)
             {
                 T[] temp = new T[capacity * 2];
-                for (int i = 0; i < capacity; i++)
+                for (int i = 0; i < count; i++)
                 {
                     temp[i] = items[i];
+                    capacity = capacity * 2;
                 }
                 items = temp;
 
@@ -77,14 +78,15 @@ namespace Custom_List_Project
         }
         public void Remove(T item)
         {
-            for(int i = 0; i < count; i++)
+            int i = 0;
+            T[] temp = new T[capacity];
+                //GenerateCapacity();
+            for (int j = 0; j < count; j++)
             {
-                T[] temp = new T[capacity];
-                for (int j = 0; j < count; j++)
-                {
                     if (!items[j].Equals(item))
                     {
                        temp[j] = items[i];
+                       i++;
                     }
                     else
                     {
@@ -92,11 +94,17 @@ namespace Custom_List_Project
                         temp[j] = items[nextIndex];
                         count--;
                     }
-                    //not getting the values shifted
-                }
-                items = temp;
+                    //not able to expand
+                    //CustomList<T> tempList = new CustomList<T>() { temp[j] };
+                    //for(int k=0; k< count; k++)
+                    //{
+                    //    items[k] = tempList[k];
+                    //}
+                   
             }
-            
+            items = temp;
+             
+                        
         }
         public override string ToString()
         {
@@ -152,11 +160,7 @@ namespace Custom_List_Project
                 return customStringList;
             }
         }
-        public void AddOperator()
-        {
-
-        }
-
+      
         public void Add(T item)
         {
             GenerateCapacity();
