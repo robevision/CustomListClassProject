@@ -84,11 +84,12 @@ namespace Custom_List_Project
                 {
                     if (!items[j].Equals(item))
                     {
-                       temp[j] = items[j];
+                       temp[j] = items[i];
                     }
                     else
                     {
-                        j++;
+                        items[i--]=temp[j++];
+                        items[i] = items[i++];
                     }
                     //not getting the values shifted
                 }
@@ -105,7 +106,7 @@ namespace Custom_List_Project
                 //works
             }
            
-            return base.ToString();
+            return appendList.ToString();
             //doesn't work
         }
         public CustomList<string> ToStringList()
