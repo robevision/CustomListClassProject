@@ -103,11 +103,11 @@ namespace Custom_List_Project
             for(int i = 0; i < count; i++)
             {
                 Console.WriteLine(appendList.Append(items[i])); 
-                //works
+               
             }
            
             return appendList.ToString();
-            //doesn't work
+            
         }
         public CustomList<string> ToStringList()
         {
