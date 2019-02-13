@@ -1,5 +1,6 @@
 ﻿using System;
 using Custom_List_Project;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CustomClassTest
@@ -277,5 +278,51 @@ namespace CustomClassTest
         //    //Act
         //    //Assert
         //}
+        [TestMethod]
+        public void Convert_Double_ToString()
+        {
+            //Arrange
+            CustomList<double> myList = new CustomList<double>() { 1.337, 1.338, 1.339, 4.1 };
+            int value = 1;
+            string expectedResult = "1.3371.3381.3394.1";
+            //Act
+            string actualResult = myList.ToString();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Does_Return_Value()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            bool expectedResult = true;
+            bool actualResult;
+            //Act
+            myList.ToString();
+            if(value != 1)
+            {
+                actualResult = true;
+            }
+            else
+            {
+                actualResult = false;
+            }
+            
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Convert_Int_ToString()
+        {
+            //Arrange
+            CustomList<int> myList = new CustomList<int>() { 1, 3, 3, 7 };
+           
+            string expectedResult = "1337";
+            //Act
+            string actualResult = myList.ToString();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

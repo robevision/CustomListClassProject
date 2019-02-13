@@ -77,60 +77,82 @@ namespace Custom_List_Project
         }
         public void Remove(T item)
         {
-            for (int i = 0; i < count; i++)
+            for(int i = 0; i < count; i++)
             {
-
-                //if(i < count - 1)
-                //{
-                //    items[i] = items[i + 1];
-                //    items[i] = items[i - 1];
-                //}
-                //else
-                //{
-                //    items[i] = items[0];
-                //}
-                if (items[i].Equals(item))
-                    //i = 0 & i = value 3
+                T[] temp = new T[capacity];
+                for (int j = 0; j < count; j++)
                 {
-                    T[] temp = new T[capacity];
-                    
-                    //T[] anotherTemp = tempList[0] - temp[i];
-                    for (int j = 0; j < count; j++)
+                    if (!items[j].Equals(item))
                     {
-                        if (!items[j].Equals(items[i]))
-                        {
-                           items[i] = temp[j];
-                         
-                            
-                        }
-                        else
-                        {
-                            count--;
-                            capacity--;
-                        }
-                        // this below is taking iteration j and equaling items that takes iteration j and subtracts i; this is not resulting in the correct way because I am just subtracting an iteration from itself and not actually removing it.
-                        //temp[j] = items[j - i];
-                        //
-                        // this below is attempting to create a new temporary list to utilize the Add method so that i could be overridden by another value. The assembly of this was abandoned because my motive is not to change a value, but remove it. Also, my count currently resides in Add and I did not want the count to be modified by doing this.
-                        //CustomList<int> tempList = new CustomList<int>();
-                        //tempList.Add(j);
+                       temp[j] = items[j];
                     }
-                    
-                    //T[] temp = { items[i] };
-                    //arrayData.splice
-                    //T[] test = items - temp[0];
-                    //bring to last array value
-                    //count--;
-                    //T value = (item - items[i]);
-                    //items[count] = value;
-                    
+                    else
+                    {
+                        j++;
+                    }
+                    //not getting the values shifted
                 }
-                else
-                {
-
-                    break;
-                }
+                items = temp;
             }
+            
+        }
+        public override string ToString()
+        {
+            StringBuilder appendList = new StringBuilder();
+            for(int i = 0; i < count; i++)
+            {
+                Console.WriteLine(appendList.Append(items[i])); 
+                //works
+            }
+           
+            return base.ToString();
+            //doesn't work
+        }
+        public CustomList<string> ToStringList()
+        {
+            CustomList<string> customStringList = new CustomList<string>();
+            try
+            {
+                //1
+                //CustomList<string> customStringList = new CustomList<string>();
+                //foreach (string value in items)
+                //{
+                //    customStringList.Add(value);
+                //}
+                //2
+                //for (int i = 0; i < count; i++)
+                //{
+                //    if (items[i].Equals(item))
+                //    {
+                //        foreach (string character in items[i])
+                //        {
+                //            items[i] = character;
+                //        }
+                //    }
+                //}
+                //3
+                //use StringBuilder or concat
+                for (int i = 0; i < count; i++)
+                {
+                    
+                    foreach (T value in items)
+                    {
+                        string test = Convert.ToString(value);
+
+                        customStringList[i] = test;
+                        return customStringList;
+                    }
+                }
+                return customStringList;
+            }
+            catch
+            {
+                return customStringList;
+            }
+        }
+        public void AddOperator()
+        {
+
         }
 
         public void Add(T item)
