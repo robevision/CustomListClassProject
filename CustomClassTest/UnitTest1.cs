@@ -294,13 +294,13 @@ namespace CustomClassTest
         public void Does_Return_Value()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
-            int value = 1;
+            CustomList<int> myList = new CustomList<int>() { 4 };
+           
             bool expectedResult = true;
             bool actualResult;
             //Act
             myList.ToString();
-            if(value != 1)
+            if(myList.ToString() == "4")
             {
                 actualResult = true;
             }

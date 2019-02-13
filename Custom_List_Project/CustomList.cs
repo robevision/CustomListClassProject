@@ -88,8 +88,9 @@ namespace Custom_List_Project
                     }
                     else
                     {
-                        items[i--]=temp[j++];
-                        items[i] = items[i++];
+                        int nextIndex = i + 1;
+                        temp[j] = items[nextIndex];
+                        count--;
                     }
                     //not getting the values shifted
                 }
