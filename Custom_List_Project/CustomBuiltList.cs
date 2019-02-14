@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Custom_List_Project
 {
-    public class CustomList<T> : IEnumerable
+    public class CustomBuiltList<T> : IEnumerable
     {
         private T[] items;
         //overload operator +
@@ -17,7 +17,7 @@ namespace Custom_List_Project
 
         int capacity;
         int count;
-        public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)
+        public static CustomBuiltList<T> operator +(CustomBuiltList<T> a, CustomBuiltList<T> b)
         {
             for (int i = 0; i < b.count; i++)
             {
@@ -27,7 +27,7 @@ namespace Custom_List_Project
 
         }
         //overload operator -
-        public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
+        public static CustomBuiltList<T> operator -(CustomBuiltList<T> a, CustomBuiltList<T> b)
         {
             //1
             //CustomList<T> c = new CustomList<T>();
@@ -70,7 +70,7 @@ namespace Custom_List_Project
             //}
             
             int i = 0;
-            CustomList<T> c = new CustomList<T>();
+            CustomBuiltList<T> c = new CustomBuiltList<T>();
                 //GenerateCapacity();
                 for (int j = 0; j < a.count; j++)
                 {
@@ -121,7 +121,7 @@ namespace Custom_List_Project
 
 
 
-        public CustomList()
+        public CustomBuiltList()
         {
             count = 0;
             capacity = 4;
@@ -204,9 +204,9 @@ namespace Custom_List_Project
             return appendList.ToString();
             
         }
-        public CustomList<string> ToStringList()
+        public CustomBuiltList<string> ToStringList()
         {
-            CustomList<string> customStringList = new CustomList<string>();
+            CustomBuiltList<string> customStringList = new CustomBuiltList<string>();
             try
             {
                 //1
@@ -246,10 +246,10 @@ namespace Custom_List_Project
                 return customStringList;
             }
         }
-        public CustomList<T> Zip(CustomList<T> items, CustomList<T> items1)
+        public CustomBuiltList<T> Zip(CustomBuiltList<T> items, CustomBuiltList<T> items1)
         {
             int j = 0;
-            CustomList<T> tempList = new CustomList<T>();
+            CustomBuiltList<T> tempList = new CustomBuiltList<T>();
             for(int i = 0; i < count; i++)
             {
                 tempList.Add(items[i]);
