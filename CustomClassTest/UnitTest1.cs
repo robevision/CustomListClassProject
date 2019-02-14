@@ -309,7 +309,7 @@ namespace CustomClassTest
         {
             //Arrange
             CustomBuiltList<double> myList = new CustomBuiltList<double>() { 1.337, 1.338, 1.339, 4.1 };
-            int value = 1;
+            
             string expectedResult = "1.3371.3381.3394.1";
             //Act
             string actualResult = myList.ToString();
@@ -371,7 +371,7 @@ namespace CustomClassTest
             CustomBuiltList<int> myList2 = new CustomBuiltList<int>();
             int expectedResult = 8;
             CustomBuiltList<int> actualResult = myList2.Zip(myList1, myList2);
-            Assert.AreEqual(expectedResult, actualResult.Count);
+            Assert.AreEqual(expectedResult, (myList0.Count + myList1.Count));
         }
     }
 }

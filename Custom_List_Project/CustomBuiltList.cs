@@ -26,78 +26,73 @@ namespace Custom_List_Project
             return a;
 
         }
+       
         //overload operator -
-        public static CustomBuiltList<T> operator -(CustomBuiltList<T> a, CustomBuiltList<T> b)
+        public static CustomBuiltList<T> operator -(CustomBuiltList<T> comparableListA, CustomBuiltList<T> comparableListB)
         {
-            //1
-            //CustomList<T> c = new CustomList<T>();
+            int i = 0;
+            CustomBuiltList<T> afterSubtraction = new CustomBuiltList<T>();
+            //GenerateCapacity();
+            for (int j = 0; j < comparableListA.count; j++)
+            {
+                if (!comparableListA[j].Equals(comparableListB[i]))
+                {
+                    afterSubtraction.Remove(comparableListA[i]);
+                    //afterSubtraction.Add(comparableListB[j]);
+                    j++;
+                }
+                else
+                {
+                    int nextIndex = i + 1;
+                    afterSubtraction.Add(comparableListA[j]);
+                    afterSubtraction.Add(comparableListB[i]);
 
-            //   foreach (T value in a)
+                }
+
+            }
+            //1
+            //CustomList<T> afterSubtraction = new CustomList<T>();
+
+            //   foreach (T value in comparableListA)
             //   {
-            //       foreach(T value1 in b)
+            //       foreach(T value1 in comparableListB)
             //       {
             //           if (value.Equals(value1))
             //           {
 
-            //               c.Remove(value1);
+            //               afterSubtraction.Remove(value1);
             //           }
             //           else
             //           {
 
-            //               c.Add(value);
+            //               afterSubtraction.Add(value);
             //           }
             //       }
             //   }
 
             //2
 
-            //    for (int i = 0; i < b.count; i++)
+            //    for (int i = 0; i < comparableListB.count; i++)
             //    {
-            //       for(int j=0; i < a.count;j++)
-            //        if (!a[i].Equals(b[i]))
+            //       for(int j=0; i < comparableListA.count;j++)
+            //        if (!comparableListA[i].Equals(comparableListB[i]))
             //        {
 
-            //            c.Add(b[i]);
-            //            c.Add(a[i]);
+            //            c.Add(comparableListB[i]);
+            //            c.Add(comparableListA[i]);
             //        }
             //        else
             //        {
 
             //            //int nextIndex = i + 1;
-            //            //c.Remove(b[nextIndex]);
+            //            //c.Remove(comparableListB[nextIndex]);
             //        }
 
             //}
-            
-            int i = 0;
-            CustomBuiltList<T> c = new CustomBuiltList<T>();
-                //GenerateCapacity();
-                for (int j = 0; j < a.count; j++)
-                {
-                    if (!a[j].Equals(b[i]))
-                    {
-                        c[j] = a[i];
-                        i++;
-                    }
-                    else
-                    {
-                        int nextIndex = i + 1;
-                        c[j] = a[j];
-                        
-                    }
-                    //not able to expand
-                    //CustomList<T> tempList = new CustomList<T>() { temp[j] };
-                    //for(int k=0; k< count; k++)
-                    //{
-                    //    items[k] = tempList[k];
-                    //}
-
-                }
-               
 
 
-            
-            return c;
+
+            return afterSubtraction;
         }
 
     //TODO: Indexer
