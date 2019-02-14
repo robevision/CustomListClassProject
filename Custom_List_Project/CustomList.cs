@@ -26,13 +26,78 @@ namespace Custom_List_Project
             return a;
 
         }
+        //overload operator -
         public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
         {
-            for (int i = 0; i < b.count; i++)
-            {
-                a.Remove(b[i]);
-            }
-            return a;
+            //1
+            //CustomList<T> c = new CustomList<T>();
+
+            //   foreach (T value in a)
+            //   {
+            //       foreach(T value1 in b)
+            //       {
+            //           if (value.Equals(value1))
+            //           {
+
+            //               c.Remove(value1);
+            //           }
+            //           else
+            //           {
+
+            //               c.Add(value);
+            //           }
+            //       }
+            //   }
+
+            //2
+
+            //    for (int i = 0; i < b.count; i++)
+            //    {
+            //       for(int j=0; i < a.count;j++)
+            //        if (!a[i].Equals(b[i]))
+            //        {
+
+            //            c.Add(b[i]);
+            //            c.Add(a[i]);
+            //        }
+            //        else
+            //        {
+
+            //            //int nextIndex = i + 1;
+            //            //c.Remove(b[nextIndex]);
+            //        }
+
+            //}
+            
+            int i = 0;
+            CustomList<T> c = new CustomList<T>();
+                //GenerateCapacity();
+                for (int j = 0; j < a.count; j++)
+                {
+                    if (!a[j].Equals(b[i]))
+                    {
+                        c[j] = a[i];
+                        i++;
+                    }
+                    else
+                    {
+                        int nextIndex = i + 1;
+                        c[j] = a[j];
+                        
+                    }
+                    //not able to expand
+                    //CustomList<T> tempList = new CustomList<T>() { temp[j] };
+                    //for(int k=0; k< count; k++)
+                    //{
+                    //    items[k] = tempList[k];
+                    //}
+
+                }
+               
+
+
+            
+            return c;
         }
 
     //TODO: Indexer
@@ -181,9 +246,41 @@ namespace Custom_List_Project
                 return customStringList;
             }
         }
-        public void Zip()
+        public CustomList<T> Zip(CustomList<T> items, CustomList<T> items1)
         {
+            int j = 0;
+            CustomList<T> tempList = new CustomList<T>();
+            for(int i = 0; i < count; i++)
+            {
+                tempList.Add(items[i]);
+                tempList.Add(items1[j++]);
+            }
+            //foreach (T value in items)
+            //{
+            //    tempList.Add(value);
+            //    tempList.Remove(value1);
 
+            //    foreach (T value1 in items1)
+
+            //    {
+
+            //        tempList.Add(value1);
+
+            //    }
+            //}
+            //Console.WriteLine(tempList);
+            //Console.ReadLine();
+            return tempList;
+        //    int i = 0;
+        //    T[] temp = new T[capacity];
+        //for(i = 0; i < count; i++)
+        //    {
+        //        temp[i]=items[i];
+        //    }
+        //for(int j = 1; j < count; j++)
+        //    {
+        //        temp[i]
+        //    }
         }
       
         public void Add(T item)

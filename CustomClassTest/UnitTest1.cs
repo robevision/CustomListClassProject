@@ -350,5 +350,28 @@ namespace CustomClassTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
+        public void ZipTwo_Int_Lists()
+        {
+            //Arrange
+            CustomList<int> myList0 = new CustomList<int>() { 1, 3, 3, 7 };
+            CustomList<int> myList1 = new CustomList<int>() { 4, 5, 6, 9 };
+            CustomList<int> myList2 = new CustomList<int>();
+            CustomList<int> expectedResult = new CustomList<int>{ 1, 4, 3, 5, 3, 6, 7, 9 };
+            //Act
+            CustomList<int> actualResult = myList2.Zip(myList1,myList2);
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void Count_Int_InZip()
+        {
+            CustomList<int> myList0 = new CustomList<int>() { 1, 3, 3, 7 };
+            CustomList<int> myList1 = new CustomList<int>() { 4, 5, 6, 9 };
+            CustomList<int> myList2 = new CustomList<int>();
+            int expectedResult = 8;
+            CustomList<int> actualResult = myList2.Zip(myList1, myList2);
+            Assert.AreEqual(expectedResult, actualResult.Count);
+        }
     }
 }

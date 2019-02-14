@@ -11,18 +11,23 @@ namespace Custom_List_Project
         static void Main(string[] args)
         {
             List<int> list = new List<int> { 1, 4, 5, 9 };
-            CustomList<int> myListA = new CustomList<int>() { 3, 4 };
-            CustomList<int> myListB = new CustomList<int>() { 1, 6 };
-            string result = myListA.ToString();
-            CustomList<string> myRemoveList = new CustomList<string>() { "hello", "world", "code" };
-            myRemoveList.Remove("world");
-            CustomList<int> myListC = new CustomList<int>();
-            myListC = myListB - myListA;
-            Console.WriteLine(myListC);
+            CustomList<int> one = new CustomList<int>() {1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 2, 4, 6 };
+            CustomList<int> three = new CustomList<int>() { 2, 1, 6 };
+            //CustomList<int> zipList = new CustomList<int>() { 1, 3, 5 };
+            //zipList.Zip(one, two);
+            //T[] zipList1 = new T[];
+            //T[] zipList2 = new CustomList<int>() { 2, 4, 6 };
+            //zipList1.Zip(zipList1, zipList2);
+            //CustomList<string> myRemoveList = new CustomList<string>() { "hello", "world", "code" };
+            //myRemoveList.Remove("world");
+            //CustomList<int> resultOne = new CustomList<int>();
+            CustomList<int> resultTwo = new CustomList<int>();
+            //resultOne = one + two;
+            resultTwo = one - three;
+            Console.WriteLine(resultTwo);
             Console.ReadLine();
-            //List<int> numbers = new List<int>() { 2, 5, 6, 2, 9, 4, 22, 3, 6, 10 };
-            //numbers.Remove(2);
-            //numbers.Remove(3);
+
             //CustomList<int> customList = new CustomList<int>();
             //customList.Add(2);
             //customList.Add(7);
@@ -37,11 +42,7 @@ namespace Custom_List_Project
             //list.Add(6);
             //list.Add(24);
             //list.Add(13);
-            //List<string> list2 = new List<string>();
-            //list2.Add("one");
-            //list2.Add("seven");
-            //list2.Add("four");
-            //CustomList<int> customList = new CustomList<int>();
+            
 
         }
     }
