@@ -30,45 +30,63 @@ namespace Custom_List_Project
         //overload operator -
         public static CustomBuiltList<T> operator -(CustomBuiltList<T> comparableListA, CustomBuiltList<T> comparableListB)
         {
-            int i = 0;
+           
             CustomBuiltList<T> afterSubtraction = new CustomBuiltList<T>();
             //GenerateCapacity();
-            for (int j = 0; j < comparableListA.count; j++)
-            {
-                if (!comparableListA[j].Equals(comparableListB[i]))
-                {
-                    afterSubtraction.Remove(comparableListA[i]);
-                    //afterSubtraction.Add(comparableListB[j]);
-                    j++;
-                }
-                else
-                {
-                    int nextIndex = i + 1;
-                    afterSubtraction.Add(comparableListA[j]);
-                    afterSubtraction.Add(comparableListB[i]);
+            //for (int j = 0; j < comparableListA.count; j++)
+            //{
+            //    if (comparableListA[j].Equals(comparableListB[j]))
+            //    {
+            //        afterSubtraction.Add(comparableListA[j]);
 
-                }
+            //    }
+            //    else
+            //    {
+            //        //int nextIndex = i + 1;
+            //        //afterSubtraction.Add(comparableListA[j]);
+            //        //afterSubtraction.Add(comparableListB[i]);
 
-            }
+            //    }
+
+            //}
+            //for(int i=0; i < comparableListB.count; i++)
+            //{
+            //    if (comparableListA[i].Equals(comparableListB[i]))
+            //    {
+            //        afterSubtraction.Add(comparableListB[i]);
+
+            //    }
+            //    else
+            //    {
+
+            //    }
+            //}
             //1
-            //CustomList<T> afterSubtraction = new CustomList<T>();
+            //CustomBuiltList<T> afterSubtraction = new CustomBuiltList<T>();
+            //int j = afterSubtraction.count;
+            //foreach (T value in comparableListA)
+            //{
+                
+            //        afterSubtraction.Add(value);
+            //}
+            //foreach (T value1 in comparableListB)
+            //{
+                
+            //        afterSubtraction.Add(value1);
+            //}
+            //for (int i = 0; i < afterSubtraction.count; i++)
+            //{
+            //    foreach (T value in comparableListA) ;
+            //    foreach (T value1 in comparableListB) ;
+            //    if(!afterSubtraction[i].Equals(comparableListA))
+            //{
 
-            //   foreach (T value in comparableListA)
-            //   {
-            //       foreach(T value1 in comparableListB)
-            //       {
-            //           if (value.Equals(value1))
-            //           {
-
-            //               afterSubtraction.Remove(value1);
-            //           }
-            //           else
-            //           {
-
-            //               afterSubtraction.Add(value);
-            //           }
-            //       }
-            //   }
+            //}
+            
+            //foreach (T value2 in afterSubtraction)
+            //{
+            //    if(!value2)
+            //}
 
             //2
 

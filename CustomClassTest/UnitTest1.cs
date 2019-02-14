@@ -356,12 +356,12 @@ namespace CustomClassTest
             //Arrange
             CustomBuiltList<int> myList0 = new CustomBuiltList<int>() { 1, 3, 3, 7 };
             CustomBuiltList<int> myList1 = new CustomBuiltList<int>() { 4, 5, 6, 9 };
-            CustomBuiltList<int> myList2 = new CustomBuiltList<int>();
             CustomBuiltList<int> expectedResult = new CustomBuiltList<int>{ 1, 4, 3, 5, 3, 6, 7, 9 };
             //Act
-            CustomBuiltList<int> actualResult = myList2.Zip(myList1,myList2);
+            myList0 = myList0.Zip(myList0,myList1);
             //Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            //Assert.IsTrue(actualResult[0] == myList0[0] && actualResult[1] == myList1[0] && actualResult[2] == myList0[1] && actualResult[3] == myList1[1] && actualResult[4] == myList0[2] && actualResult[5] == myList1[2] && actualResult[6] == myList0[3] && actualResult[7] == myList1[3]);
+            Assert.IsTrue(myList0[0] == expectedResult[0] && myList0[1] == expectedResult[1] && myList0[2] == expectedResult[2] && myList0[3] == expectedResult[3] && myList0[4] == expectedResult[4] && myList0[5] == expectedResult[5] && myList0[6] == expectedResult[6] && myList0[7] == expectedResult[7]);
         }
         [TestMethod]
         public void Count_Int_InZip()
