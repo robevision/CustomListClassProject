@@ -32,7 +32,14 @@ namespace Custom_List_Project
         {
            
             CustomBuiltList<T> afterSubtraction = new CustomBuiltList<T>();
+            CustomBuiltList<T> listOutput = new CustomBuiltList<T>();
             //GenerateCapacity();
+            for (int i = 0; i < comparableListA.count; i++)
+            {
+                comparableListA.Remove(comparableListB[i]);
+            }
+            return comparableListA;
+            //0
             //for (int j = 0; j < comparableListA.count; j++)
             //{
             //    if (comparableListA[j].Equals(comparableListB[j]))
@@ -49,7 +56,8 @@ namespace Custom_List_Project
             //    }
 
             //}
-            //for(int i=0; i < comparableListB.count; i++)
+            //0.5
+            //for (int i = 0; i < comparableListB.count; i++)
             //{
             //    if (comparableListA[i].Equals(comparableListB[i]))
             //    {
@@ -64,40 +72,46 @@ namespace Custom_List_Project
             //1
             //CustomBuiltList<T> afterSubtraction = new CustomBuiltList<T>();
             //int j = afterSubtraction.count;
+            //int k = comparableListA.count;
+            //int l = comparableListB.count;
             //foreach (T value in comparableListA)
             //{
-                
-            //        afterSubtraction.Add(value);
+
+            //    afterSubtraction.Add(value);
             //}
             //foreach (T value1 in comparableListB)
             //{
-                
-            //        afterSubtraction.Add(value1);
+
+            //    afterSubtraction.Add(value1);
             //}
             //for (int i = 0; i < afterSubtraction.count; i++)
             //{
             //    foreach (T value in comparableListA) ;
             //    foreach (T value1 in comparableListB) ;
-            //    if(!afterSubtraction[i].Equals(comparableListA))
-            //{
+            //    if (!afterSubtraction[i].Equals(comparableListA[i]))
+            //    {
+            //        listOutput.Add(comparableListA[i]);
+            //    }
 
-            //}
-            
-            //foreach (T value2 in afterSubtraction)
-            //{
-            //    if(!value2)
+            //    foreach (T value2 in afterSubtraction)
+            //    {
+            //        if (!afterSubtraction[i].Equals(comparableListB[i]))
+            //        {
+            //            listOutput.Add(comparableListB[i]);
+            //        }
+            //    }
             //}
 
             //2
 
-            //    for (int i = 0; i < comparableListB.count; i++)
-            //    {
-            //       for(int j=0; i < comparableListA.count;j++)
+            //for (int i = 0; i < comparableListB.count; i++)
+            //{
+            //    for (int j = 0; i < comparableListA.count; j++)
             //        if (!comparableListA[i].Equals(comparableListB[i]))
             //        {
 
-            //            c.Add(comparableListB[i]);
-            //            c.Add(comparableListA[i]);
+            //            afterSubtraction.Add(comparableListB[i]);
+            //            afterSubtraction.Add(comparableListA[i]);
             //        }
             //        else
             //        {
@@ -110,7 +124,7 @@ namespace Custom_List_Project
 
 
 
-            return afterSubtraction;
+            //return listOutput;
         }
 
     //TODO: Indexer
